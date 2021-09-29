@@ -59,32 +59,26 @@ public class Client {
         this.id = id;
     }
 
-    @JsonProperty("login")
     public String getLogin() {
         return login;
     }
 
-    @JsonProperty("login")
     public void setLogin(String login) {
         this.login = login;
     }
 
-    @JsonProperty("salt")
     public String getSalt() {
         return salt;
     }
 
-    @JsonProperty("salt")
     public void setSalt(String salt) {
         this.salt = salt;
     }
 
-    @JsonProperty("secret")
     public String getSecret() {
         return secret;
     }
 
-    @JsonProperty("secret")
     public void setSecret(String secret) {
         this.secret = secret;
     }

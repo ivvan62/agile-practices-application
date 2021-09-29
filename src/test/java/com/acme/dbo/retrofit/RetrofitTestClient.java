@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class RetrofitTestClient {
-    ClientService service;
+    private ClientService service;
 
     @BeforeEach
     public void init() {
@@ -36,8 +36,8 @@ public class RetrofitTestClient {
 
     @Test
     public void shouldPostClient() throws IOException {
-        String loginClient = service.createClient(new Client("2@2.ru", "same-salt", "2131231ffd43400000"))
+        String loginClient = service.createClient(new Client("6@2.ru", "same-salt", "2131231ffd43400000"))
                 .execute().body().getLogin();
-        assertEquals("2@2.ru", loginClient);
+        assertEquals("6@2.ru", loginClient);
     }
 }

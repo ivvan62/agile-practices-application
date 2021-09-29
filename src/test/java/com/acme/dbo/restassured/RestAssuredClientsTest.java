@@ -13,9 +13,9 @@ import static org.hamcrest.Matchers.*;
 
 public class RestAssuredClientsTest {
     private RequestSpecification request;
-    private final String BASE_URI = "http://localhost";
-    private final int PORT = 8080;
-    private final String BASE_PATH = "/dbo/api/";
+    private static final String BASE_URI = "http://localhost";
+    private static final int PORT = 8080;
+    private static final String BASE_PATH = "/dbo/api/";
 
 
     @BeforeEach
@@ -28,6 +28,8 @@ public class RestAssuredClientsTest {
                 .contentType(ContentType.JSON)
                 .filters(new RequestLoggingFilter(), new RequestLoggingFilter());
     }
+
+
 
     @Test
     public void shouldGetClientById() {
